@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <title>Meniň Saýtym</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h1 {
+            color: #1e293b;
+        }
+
+        .duwme {
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .surat-style {
+            display: none;
+            margin-top: 15px;
+            max-width: 85%;
+            border-radius: 12px;
+        }
+
+        /* Klip (video) üçin bezeg */
+        #klip {
+            display: none;
+            margin-top: 15px;
+            width: 85%;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Salam, aklym!</h1>
+    <p>sularyn barsyny gije yatman sen üçün duzup çykdym janym meŋ😘</p>
+   <p>Søýänä seni</p>
+    
+    <!-- Düwmeler -->
+    <button class="duwme" onclick="elementGorkez('surat1')">1-nji surat</button>
+    <button class="duwme" onclick="elementGorkez('surat2')">2-nji surat</button>
+    <button class="duwme" onclick="elementGorkez('klip')">Klibi görkez</button>
+
+    <br>
+
+    <!-- Suratlar -->
+    <img id="surat1" class="surat-style" src="surat.jpg" alt="1-nji surat">
+    <img id="surat2" class="surat-style" src="surat2.jpg" alt="2-nji surat">
+
+    <!-- Klip (Video) -->
+    <!-- 'controls' sözi videoda pauza, ses we goýbermek düwmelerini çykarýar -->
+    <video id="klip" controls>
+        <source src="klip.mp4" type="video/mp4">
+        Siziň brauzeriňiz videony goldamaýar.
+    </video>
+
+    <!-- JavaScript -->
+    <script>
+        function elementGorkez(elementId) {
+            var elem = document.getElementById(elementId);
+            if (elem.style.display === "none" || elem.style.display === "") {
+                elem.style.display = "inline-block";
+            } else {
+                elem.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
